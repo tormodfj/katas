@@ -55,12 +55,12 @@ namespace Tennis.Tests
             {
                 new { Game = "1", ExpectedScore = "15, Love" },
                 new { Game = "11", ExpectedScore = "30, Love" },
-                new { Game = "111", ExpectedScore = "40, Love" },
+                new { Game = "111", ExpectedScore = "40, Love. Set ball " + Player1 },
                 new { Game = "1111", ExpectedScore = Player1 + " wins!" },
 
                 new { Game = "2", ExpectedScore = "Love, 15" },
                 new { Game = "22", ExpectedScore = "Love, 30" },
-                new { Game = "222", ExpectedScore = "Love, 40" },
+                new { Game = "222", ExpectedScore = "Love, 40. Set ball " + Player2 },
                 new { Game = "2222", ExpectedScore = Player2 + " wins!" },
 
                 new { Game = "12", ExpectedScore = "15 all" },
@@ -74,8 +74,8 @@ namespace Tennis.Tests
                 new { Game = "111111222222", ExpectedScore = "Deuce" },
 
                 new { Game = "112", ExpectedScore = "30, 15" },
-                new { Game = "1121", ExpectedScore = "40, 15" },
-                new { Game = "11212", ExpectedScore = "40, 30" },
+                new { Game = "1121", ExpectedScore = "40, 15. Set ball " + Player1 },
+                new { Game = "11212", ExpectedScore = "40, 30. Set ball " + Player1 },
                 new { Game = "112121", ExpectedScore = Player1 + " wins!" },
 
                 new { Game = "1121221", ExpectedScore = "Advantage " + Player1 },

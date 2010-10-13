@@ -75,7 +75,14 @@ namespace Tennis
 
         private string CallEarlyScore()
         {
-            return string.Format("{0}, {1}", CallPointScore(_playerOneScore), CallPointScore(_playerTwoScore));
+            if (OnePlayerHasFortyOrMore)
+            {
+                return string.Format("{0}, {1}. Set ball {2}", CallPointScore(_playerOneScore), CallPointScore(_playerTwoScore), LeadingPlayer);
+            }
+            else
+            {
+                return string.Format("{0}, {1}", CallPointScore(_playerOneScore), CallPointScore(_playerTwoScore));
+            }
         }
 
         private string CallLateScore()
