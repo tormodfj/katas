@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Microsoft.FSharp.Collections;
 
 namespace Bowling
 {
@@ -26,7 +27,8 @@ namespace Bowling
 
 		public int CalculateScore()
 		{
-			return BowlingCalculator.CalculateScore(pinsKnockedOver.ToFSharpList());
+			var pins = ListModule.OfSeq(pinsKnockedOver);
+			return BowlingCalculator.CalculateScore(pins);
 		}
 	}
 }
