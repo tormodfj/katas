@@ -47,7 +47,7 @@ namespace Bowling.Tests.PlayerSpecs
 		}
 
 		[TestMethod]
-		public void Should_count_score_for_strike_after_next_attempt()
+		public void Should_count_score_for_spare_after_next_attempt()
 		{
 			KnockOver(3);
 			AssertScore(13);
