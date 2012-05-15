@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace Reversi
@@ -24,7 +23,7 @@ namespace Reversi
 
         private static char[][] FillLegalMoves(char[][] input, char legalMoveIndicator)
         {
-            char currentPlayer = input.Last().Last();
+			char currentPlayer = input[8][0];
             char[][] relevantInput = input.Take(8).ToArray();
 
             return 
@@ -40,7 +39,8 @@ namespace Reversi
 
         private static string FormatBoard(char[][] legalMoves)
         {
-            return string.Join(Environment.NewLine, legalMoves.Select(line => new string(line)));
+			var lines = legalMoves.Select(line => new string(line));
+			return string.Join(Environment.NewLine, lines);
         }
 
         private static bool IsLegalMove(char[][] input, char player, int row, int col)
@@ -119,8 +119,7 @@ namespace Reversi
 
         private static char OtherPlayer(char player)
         {
-            var map = new Dictionary<char, char> { { 'B', 'W' }, { 'W', 'B' } };
-            return map[player];
+			return player == 'B' ? 'W' : 'B';
         }
     }
 }
