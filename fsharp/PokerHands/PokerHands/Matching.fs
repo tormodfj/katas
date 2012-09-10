@@ -132,7 +132,7 @@ let matchOnePair hand =
         |> Seq.map (fun (n,s) -> n,(Seq.length s)) 
         |> Seq.sortBy descLength
         |> Array.ofSeq
-    // Expect groups of 2 + 1 + 1 + 1 values, meaning two pairs
+    // Expect groups of 2 + 1 + 1 + 1 values, meaning one pair
     if matches.Length <> 4 || snd(matches.[0]) <> 2 then noMatch
     else 
     { 
