@@ -1,0 +1,37 @@
+@base = https://sudokufun.azurewebsites.net
+#@base = http://localhost:7071
+
+POST {{base}}/api/solve
+Content-Type: text/plain
+
+53..7....
+6..195...
+.98....6.
+8...6...3
+4..8.3..1
+7...2...6
+.6....28.
+...419..5
+....8..79
+
+###
+
+POST {{base}}/api/solve
+Content-Type: text/plain
+
+39.......
+...14...5
+7....3.69
+..4.....2
+.6..7....
+...438...
+.5...4.9.
+..3.9.1..
+9.....8..
+
+###
+
+POST {{base}}/api/solve
+Content-Type: text/plain
+
+LOLZ
