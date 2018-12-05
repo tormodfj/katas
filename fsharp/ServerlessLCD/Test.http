@@ -1,0 +1,11 @@
+@base = http://localhost:7071
+
+GET {{base}}/api/lcd-display?number=1234567890
+
+###
+
+GET {{base}}/api/lcd-display
+
+###
+
+GET {{base}}/api/lcd-display?number=ABC
