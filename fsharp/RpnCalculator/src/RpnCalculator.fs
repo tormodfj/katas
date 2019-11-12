@@ -3,11 +3,11 @@
 let calculateRpn rpnExpr =
     let tokenize (expr:string) = expr.Split(' ') |> List.ofArray
 
-    let (|Operand|_|) token =
+    let (|Operand|_|) (token:string) =
         let isOperand, operand = Double.TryParse(token)
         if isOperand then Some(operand) else None
 
-    let (|Operator|_|) token =
+    let (|Operator|_|) (token:string) =
         let isOperator, operator = Char.TryParse(token)
         if isOperator then Some(operator) else None
 
